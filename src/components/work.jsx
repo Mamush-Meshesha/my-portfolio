@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import SvgCurve from "./curve";
 
 const Works = () => {
     const videoRef = useRef(null);
@@ -24,6 +25,10 @@ const Works = () => {
     return (
       <div className="py-16 min-h-screen">
         <div>
+          <div className="flex flex-col gap-6 ">
+            <h1 className="text-3xl">Featured Works</h1>
+            <SvgCurve className="text-white" />
+          </div>
           {/* featured works */}
           <div className="bg-[#0b111f] w-[94%]  rounded-2xl text-white  ">
             <div className="pt-2">

@@ -1,5 +1,17 @@
+import { useEffect, useState } from "react";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 const Landing = () => {
+  const [currentTime, setCurrentTime] = useState(new Date())
+  
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date())
+
+      
+    })
+    return () => clearInterval(intervalId);
+  },[])
   return (
     <div>
       <div className="flex h-full w-screen pt-10  items-center">
@@ -22,6 +34,17 @@ const Landing = () => {
               with a dynamic and innovative team.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="pt-52 flex justify-between w-full">
+        <div>
+          <h1 className="text-3xl capitalize py-3">Based in Addis Ababa, Ethiopia</h1>
+          <p className="text-2xl">{ currentTime.toLocaleTimeString()}</p>
+        </div>
+        <div className=" gap-6 items-center pr-28 flex text-3xl">
+          <FaGithub />
+          <FaLinkedin />
+          <FaTelegram />
         </div>
       </div>
     </div>
