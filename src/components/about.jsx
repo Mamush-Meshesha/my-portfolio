@@ -2,7 +2,7 @@ import SvgCurve from "./curve";
 
 const About = () => {
   return (
-    <div className="py-16 min-h-screen flex items-center">
+    <div id="about" style={{ height: "100vh", }} className="py-16  flex items-center">
       <div className="">
         <div className="flex flex-col gap-6 ">
           <h1 className="text-3xl">About Me</h1>

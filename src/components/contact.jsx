@@ -29,7 +29,7 @@ const notify = () => toast("Message Sent successfully")
 
   return (
     <>
-      <div className="min-h-screen  flex items-center w-full">
+      <div id="contact" className="min-h-screen  flex items-center w-full">
         <div className="w-full">
           <div className="flex flex-col  gap-4 py-10">
             <h1 className="text-3xl">Contact Me</h1>

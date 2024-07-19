@@ -13,7 +13,7 @@ const Landing = () => {
     return () => clearInterval(intervalId);
   },[])
   return (
-    <div className="xs:flex xs:flex-col ">
+    <div id="home" className="xs:flex xs:flex-col ">
       <div className="lg:flex lg:h-full w-screen lg:pt-10 pt-3  lg:items-center">
         <div className="flex lg:gap-10 xs:flex-col lg:flex-row lg:justify-center lg:items-center">
           <div className="xs:mt-[-10rem] lg:mt-0">
