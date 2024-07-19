@@ -36,14 +36,14 @@ const notify = () => toast("Message Sent successfully")
             <SvgCurve className="text-white" />
           </div>
           <div
-            className="h-[45rem] w-[94%] py-10 px-10  rounded-2xl flex gap-10 "
+            className="h-[45rem] w-[94%] lg:py-10 xs:py-5 lg:px-10   rounded-2xl flex lg:flex-row xs:flex-col gap-10 "
             style={{ backgroundColor: "rgba(11, 17, 31, 0.9)" }}
           >
-            <div className="w-[550px] flex flex-col gap-6 ">
+            <div className="lg:w-[550px]  flex flex-col gap-6 px-3 ">
               {/* info */}
               <div
                 style={{ backgroundColor: "rgba(15, 23, 42, 0.9)" }}
-                className="w-[500px] flex flex-col h-auto rounded-lg gap-5 px-6 py-10  "
+                className="lg:w-[500px] xs:w-[98%] flex flex-col h-auto rounded-lg gap-5 px-6 py-10  "
               >
                 <div className="">
                   <span className="bg-white w-8 h-8 rounded-lg grid  place-items-center">
@@ -58,7 +58,7 @@ const notify = () => toast("Message Sent successfully")
               {/* chat with me */}
               <div
                 style={{ backgroundColor: "rgba(15, 23, 42, 0.9)" }}
-                className="w-[500px] flex flex-col h-auto rounded-lg gap-5 px-6 py-10  "
+                className="lg:w-[500px] xs:w-[98%] flex flex-col h-auto rounded-lg gap-5 px-6 py-10 "
               >
                 <div className="">
                   <span className="bg-white w-8 h-8 rounded-lg grid  place-items-center">
@@ -79,8 +79,8 @@ const notify = () => toast("Message Sent successfully")
                 className="w-full h-[40rem] rounded-2xl p-7"
                 style={{ backgroundColor: "rgba(15, 23, 42, 0.9)" }}
               >
-                <div className="flex flex-col gap-12">
-                  <div className="grid grid-cols-2 gap-10   ">
+                <div className="flex flex-col xs:gap-4 lg:gap-12">
+                  <div className="lg:grid lg:grid-cols-2 xs:flex xs:flex-col xs:gap-4 lg:gap-10   ">
                     <div className="relative w-[100%] ">
                       <FaUser className="absolute my-6 mx-3" />
                       <input
@@ -125,7 +125,6 @@ const notify = () => toast("Message Sent successfully")
           </div>
         </div>
       </div>
-      
     </>
   );
 };

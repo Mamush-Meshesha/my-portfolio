@@ -1,29 +1,33 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import SvgCurve from "./curve";
+import { VscLiveShare } from "react-icons/vsc";
 
 const Works = () => {
     const videoRef = useRef(null);
-    const containerRef = useRef(null);
+  const containerRef = useRef(null);
+  const [shovered, setSHovered] = useState(false)
+  const [chovered, setCHovered] = useState(false)
+  const [fhovered, setFHovered] = useState(false)
+  const [vhovered,setVHovered] = useState(false)
     const handleMouseEnter = () => {
       if (videoRef.current) {
         videoRef.current.play();
          videoRef.current.playbackRate = 2.0;
       }
        if (containerRef.current) {
-         containerRef.current.style.width = "110%"; // Increase width by 10%
+         containerRef.current.style.width = "110%"; 
        }
     };
 
     const handleMouseLeave = () => {
       if (videoRef.current) {
         videoRef.current.pause();
+        videoRef.current.playbackRate = 2.0;
       }
-       if (containerRef.current) {
-         containerRef.current.style.width = "100%"; // Reset width to 100%
-       }
+  
     };
     return (
-      <div className="py-16 min-h-screen">
+      <div className="md:py-16 md:min-h-screen">
         <div>
           <div className="flex flex-col gap-6 ">
             <h1 className="text-3xl">Featured Works</h1>
@@ -34,12 +38,16 @@ const Works = () => {
             <div className="pt-2">
               <div className="w-[99%] mx-[0.5%]   h-20 bg-[#10192e] rounded-xl">
                 <div className="flex items-center h-full  px-7">
-                  <h1 className="text-3xl ">E-commerce website</h1>
+                  <h1 className="text-2xl ">E-commerce website</h1>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-10 py-10 px-10">
-                <div className="w-[70%] ">
-                  <p>
+              <div
+                onMouseEnter={() => setVHovered(true)}
+                onMouseLeave={() => setVHovered(false)}
+                className="md:grid md:grid-cols-2 sx:flex xs:flex-col relative gap-10 md:p-10 xs:p-4"
+              >
+                <div className="lg:w-[70%] ">
+                  <p className="text-xl">
                     I developed a fully functional e-commerce website using the
                     MERN stack (MongoDB, Express.js, React.js, Node.js) and
                     Redux Toolkit for state management. The website allows users
@@ -61,59 +69,97 @@ const Works = () => {
                     loop
                   />
                 </div>
+                {vhovered ? (
+                  <div className="absolute top-0 right-0 rounded-md px-5  h-12 ">
+                    <a
+                      href="https://e-commerce-e0of.onrender.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <VscLiveShare className="w-7 h-7 bg-white rounded-md text-black text-xs " />
+                    </a>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
-          {/* sub works */}
+          {/* sub works sub title of the original */}
           <div className=" mt-5 w-[94%]  ">
-            <div className="grid grid-cols-3 gap-7 ">
+            <div className="lg:grid lg:grid-cols-3 xs:flex xs:flex-col gap-7 ">
               {/* song management */}
-              <div className="bg-[#0b111f] w-full h-full rounded-2xl text-white">
+              <div
+                onMouseLeave={() => setSHovered(false)}
+                onMouseEnter={() => setSHovered(true)}
+                className="bg-[#0b111f] relative w-full h-full rounded-2xl text-white"
+              >
                 <h1>Song Management</h1>
-                <div
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <video
-                    ref={videoRef}
+                <div>
+                  <img
                     className="w-full h-[350px] object-cover  rounded-2xl"
-                    src="/video/song.webm"
-                    muted
-                    loop
+                    src="/images/song.png"
                   />
                 </div>
+                {shovered ? (
+                  <div className="absolute top-0 right-0 rounded-md px-5  h-12 ">
+                    <a
+                      href="https://addis-sontware-test.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <VscLiveShare className="w-7 h-7 bg-white rounded-md text-black text-xs " />
+                    </a>
+                  </div>
+                ) : null}
               </div>
               {/* realtime chat */}
-              <div className="bg-[#0b111f] w-full h-full  rounded-2xl text-white">
+              <div
+                onMouseEnter={() => setCHovered(true)}
+                onMouseLeave={() => setCHovered(false)}
+                className="bg-[#0b111f] w-full h-full relative  rounded-2xl text-white"
+              >
                 <h1>Real time chat</h1>
-                <div
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <video
-                    ref={videoRef}
+                <div>
+                  <img
                     className="w-full h-[350px] object-cover  rounded-2xl"
-                    src="/video/ecomerce-portf.webm"
-                    muted
-                    loop
+                    src="/images/chat.png"
                   />
                 </div>
+                {chovered ? (
+                  <div className="absolute top-0 right-0 rounded-md px-5  h-12 ">
+                    <a
+                      href="https://github.com/Mamush-Meshesha/M-chat"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <VscLiveShare className="w-7 h-7 bg-white rounded-md text-black text-xs " />
+                    </a>
+                  </div>
+                ) : null}
               </div>
               {/* food recipe */}
-              <div className="bg-[#0b111f] w-full h-full  rounded-2xl text-white">
+              <div
+                onMouseEnter={() => setFHovered(true)}
+                onMouseLeave={() => setFHovered(false)}
+                className="bg-[#0b111f] w-full h-full relative  rounded-2xl text-white"
+              >
                 <h1>Food recipe</h1>
-                <div
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <video
-                    ref={videoRef}
+                <div>
+                  <img
                     className="w-full h-[350px] object-cover  rounded-2xl"
-                    src="/video/ecomerce-portf.webm"
-                    muted
-                    loop
+                    src="/images/food.png"
                   />
                 </div>
+                {fhovered ? (
+                  <div className="absolute top-0 right-0 rounded-md px-5  h-12 ">
+                    <a
+                      href="https://github.com/Mamush-Meshesha/recipe_frontend"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <VscLiveShare className="w-7 h-7 bg-white rounded-md text-black text-xs " />
+                    </a>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>

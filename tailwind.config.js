@@ -9,6 +9,13 @@ export default {
       // eslint-disable-next-line no-dupe-keys
       backgroundImage: {
         star: "url(/images/ma.jpg)",
+      },
+      screens: {
+        xl: "1000px",
+        lg: "768px",
+        md: "640px",
+        sm: "480px",
+        xs: "320px",
       }
     },
   },
