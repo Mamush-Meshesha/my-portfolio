@@ -31,7 +31,7 @@ const notify = () => toast("Message Sent successfully")
     <>
       <div id="contact" className="min-h-screen  flex items-center w-full">
         <div className="w-full">
-          <div className="flex flex-col  gap-4 py-10">
+          <div className="flex flex-col  gap-4 lg:py-10 xs:py-4">
             <h1 className="text-3xl">Contact Me</h1>
             <SvgCurve className="text-white" />
           </div>

@@ -27,7 +27,7 @@ const Works = () => {
   
     };
     return (
-      <div id="work" className="md:py-16 md:min-h-screen">
+      <div id="work" className="md:py-16 xs:py-0 xs:h-auto lg:min-h-screen">
         <div>
           <div className="flex flex-col gap-6 ">
             <h1 className="text-3xl">Featured Works</h1>

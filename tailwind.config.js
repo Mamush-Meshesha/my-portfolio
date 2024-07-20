@@ -11,9 +11,8 @@ export default {
         star: "url(/images/ma.jpg)",
       },
       screens: {
-        xl: "1000px",
-        lg: "768px",
-        md: "640px",
+        lg: "1000px",
+        md: "768px",
         sm: "480px",
         xs: "320px",
       }

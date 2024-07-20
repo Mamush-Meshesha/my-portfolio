@@ -14,16 +14,16 @@ const Landing = () => {
   },[])
   return (
     <div id="home" className="xs:flex xs:flex-col ">
-      <div className="lg:flex lg:h-full w-screen lg:pt-10 pt-3  lg:items-center">
-        <div className="flex lg:gap-10 xs:flex-col lg:flex-row lg:justify-center lg:items-center">
-          <div className="xs:mt-[-10rem] lg:mt-0">
+      <div className="lg:flex lg:h-full md:h-auto w-screen lg:pt-10 pt-3  lg:items-center">
+        <div className="flex lg:gap-10  xs:flex-col lg:flex-row lg:justify-center lg:items-center">
+          <div className="xs:mt-[-10rem] md:mt-0 lg:mt-0 md:flex md:justify-center">
             <img
               src="/images/Ma.jpg"
               alt="no image"
-              className="w-full h-full object-cover rounded-full"
+              className="w-full h-full md:h-auto object-cover md:w-[50%] rounded-full"
             />
           </div>
-          <div className="flex flex-col gap-3  text-white lg:w-[40%] ">
+          <div className="lg:flex flex-col gap-3  text-white lg:w-[40%] xs:hidden ">
             <span className="xs:text-center">Hello, My Name is ,</span>
             <span className="xs:text-center text-2xl">Mamush Meshesha</span>
             <p className="xs:text-center text-xl">
@@ -37,7 +37,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div className="lg:pt-52 xs:pt-5 flex justify-between  w-full">
+      <div className="lg:pt-52 xs:pt-[14rem] flex justify-between   w-full">
         <div>
           <h1 className="lg:text-3xl capitalize xs:font-bold  lg:py-3">
             Based in Addis Ababa, Ethiopia

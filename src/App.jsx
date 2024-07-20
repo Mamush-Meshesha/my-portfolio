@@ -21,8 +21,12 @@ function App() {
               </div>
             </div>
             <div>
-              <About />
-              <Works />
+              <div className="">
+                <About />
+              </div>
+              <div className="xs:pt-[13rem] md:pt-0">
+                <Works />
+              </div>
 
               <ContactMe />
             </div>

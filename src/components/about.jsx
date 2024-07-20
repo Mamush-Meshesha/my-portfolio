@@ -2,13 +2,13 @@ import SvgCurve from "./curve";
 
 const About = () => {
   return (
-    <div id="about" style={{ height: "100vh", }} className="py-16  flex items-center">
+    <div id="about" className="lg:pt-16   flex items-center xs:pt-0 md:pt-[-400px] ">
       <div className="">
         <div className="flex flex-col gap-6 ">
           <h1 className="text-3xl">About Me</h1>
           <SvgCurve className="text-white" />
         </div>
-        <div className="py-8 lg:grid lg:grid-cols-2 xs:flex xs:flex-col gap-3">
+        <div className="lg:py-8 xs:py-4 lg:grid lg:grid-cols-2 xs:flex xs:flex-col gap-3">
           <div className="w-[90%] lg:h-[35rem] p-5 rounded-xl bg-[#0b111f]  ">
             <div>
               <h1 className="text-xl text-center">Hello,</h1>
@@ -27,7 +27,7 @@ const About = () => {
             </div>
           </div>
           {/* stack */}
-          <div className="w-[90%] lg:h-[35rem] lg:p-5 xs:p-2 rounded-xl bg-[#0b111f]  ">
+          <div className="w-[90%] lg:h-[35rem] xs:h-auto lg:p-5 xs:p-2 rounded-xl bg-[#0b111f]  ">
             <div>
               <h1 className="text-2xl py-3">MY TECH STACK</h1>
             </div>
